@@ -1,66 +1,161 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+:root {
+    --header-color:#3C6E71;
+    --background-color:#F4F9E9;
+    --primary-color:#EEF0EB;
+    --secondary-color:#B4B8AB;
+    --footer-color:#353535;
+    --text-color: #FFF;
 }
 
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-VariableFont_wght.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "MontserratItalic";
+    src: url("/fonts/Montserrat-Italic-VariableFont_wght.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "Mulish";
+    src: url("/fonts/Mulish-VariableFont_wght.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "MulishItalic";
+    src: url("/fonts/Mulish-Italic-VariableFont_wght.woff2") format('woff2');
+}
+
+
+/* Universal reset for box-sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Remove default margin and padding */
+  body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, blockquote, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set body styles */
+  body {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Remove list styles */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Remove default border for images */
+  img {
+    border: 0;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Style links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Reset form elements */
+  input, button, textarea, select {
+    border: none;
+    outline: none;
+    background: transparent;
+    font: inherit;
+    color: inherit;
+  }
+
+
+body {
+    margin-left: 10vh;
+    margin-right: 10vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #EEF0EB;
+}
+  
+.body-container {
+    display: flex;
+    flex-grow: 1;
+}
 
 .nav-element-bar {
+    background-color: #FFF;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    height: 10vh;
+    border: 1px solid var(--secondary-color);
+    margin-top: 5vh;
 }
 
 .nav-element-bar > ol {
     display: flex;
     justify-content: center;
     gap: 10vh;
-    padding-right: 20vh;
-    padding-left: 20vh;
+    padding-right: 10vh;
+    padding-left: 10vh;
 }
 
 ol > li > a {
-    text-decoration: none !important;
-    font-size: larger;
-    font-weight: bolder;
-    color: black;
+    font-family: "Mulish";
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--footer-color);
+}
+
+.nav-logo-bar {
+    background-color: #FFF;
+    justify-content: flex-start;
+    display: flex;
+    height: 10vh;
+    width: 30vh;
+    padding-left: 5vh;
+}
+
+.email-logo {
+    background: url("/icons/at.svg");
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: 4vh
+}
+
+h1 {
+    font-family: "Montserrat";
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.footer-element-bar {
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 10vh;
+    border: 1px solid var(--secondary-color);
+    margin-bottom: 5vh;
+}
+
+.footer-element-bar > ul {
+    display: flex;
+    justify-content: center;
+    gap: 10vh;
+    padding-right: 10vh;
+    padding-left: 10vh;
+}
+
+.footer-element-bar > ul > li {
+    font-family: "Mulish";
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--footer-color);
 }
